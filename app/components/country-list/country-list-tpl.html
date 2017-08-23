@@ -1,0 +1,6 @@
+<input class="form-control mr-sm-2" type="text" placeholder="Search" ng-model="$ctrl.searchKey">
+<ul class="list-group">
+    <li class="list-group-item" 
+    ng-repeat="country in $ctrl.countries | orderBy: 'title' | filter:$ctrl.searchKey | limitTo:15" 
+    ng-click="$ctrl.selectCountry(country.id)">{{country.title}}</li>
+</ul>
